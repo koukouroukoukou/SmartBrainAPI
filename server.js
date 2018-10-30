@@ -12,10 +12,8 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'postgresql-fluffy-85879',
-        user: 'postgres',
-        password: '1234',
-        database: 'smart-brain'
+        host: AudioProcessingEvent.env.DATABASE_URL,
+        ssl: true
     }
 });
 
