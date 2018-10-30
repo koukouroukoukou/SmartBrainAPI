@@ -12,7 +12,7 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        host: AudioProcessingEvent.env.DATABASE_URL,
+        connectionString: AudioProcessingEvent.env.DATABASE_URL,
         ssl: true
     }
 });
